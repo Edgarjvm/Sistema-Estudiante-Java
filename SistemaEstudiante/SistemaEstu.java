@@ -14,9 +14,12 @@ public class SistemaEstu {
     static RegEstuadiante regE = new RegEstuadiante();
     static Scanner esc = new Scanner(System.in);
     static int opc = 0, indice = -1;
-    static String archivo = "C:\\Users\\varae\\OneDrive\\Desktop\\Programacion\\EJVM\\SistemaEstudiante\\estudiantes.txt";
+    static String archivo = "estudiantes.txt";
     public static void main(String[] args) {
         try {
+            BufferedWriter bw = new BufferedWriter(
+                new FileWriter(archivo, true)
+            );
             BufferedReader br = new BufferedReader(
                 new FileReader(archivo)
             );String linea;
@@ -34,7 +37,7 @@ public class SistemaEstu {
             System.out.println("ESTUDIANTES CARGADOS: " +estudiantes.size());
             System.out.println();
             br.close();
-            
+            bw.close();
             do {
                 
                 System.out.println("1)Registrar estudiante   2)Mostrar estudiantes");
