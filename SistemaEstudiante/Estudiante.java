@@ -5,12 +5,12 @@ public class Estudiante {
     private int edad;
     private char sexo;
     private String matricula;
-    private String carrera;
+    private Carrera carrera;
     private String correo;
 
     public Estudiante(){
     }
-    public Estudiante(String nombre, int edad, char sexo, String matricula, String carrera, String correo){
+    public Estudiante(String nombre, int edad, char sexo, String matricula, Carrera carrera, String correo){
         this.nombre = nombre;
         this.edad = edad;
         this.sexo = sexo;
@@ -42,10 +42,10 @@ public class Estudiante {
     public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
-    public String getCarrera() {
+    public Carrera getCarrera() {
         return carrera;
     }
-    public void setCarrera(String carrera) {
+    public void setCarrera(Carrera carrera) {
         this.carrera = carrera;
     }
     public String getCorreo() {
